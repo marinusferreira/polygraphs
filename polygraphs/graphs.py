@@ -393,7 +393,7 @@ def gml(params):
     # Load graph using edge list so that we preserve node ids
     edges = []
 
-    for edge in list(nx.to_edgelist(G)):
+    for edge in list(G.edges()):
         try:
             edges.append((int(edge[0]), int(edge[1])))
         except:
